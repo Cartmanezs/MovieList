@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="108" width="393" height="744"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="315" id="kC9-8l-LJC">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="315" id="kC9-8l-LJC" customClass="MovieTableViewCell" customModule="MovieList" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="315"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kC9-8l-LJC" id="3EU-hs-NEl">
@@ -68,6 +68,12 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="o3A-UT-KXm" secondAttribute="trailing" constant="2" id="sEz-rA-cdm"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="movieGenre" destination="WrE-66-MuB" id="ZON-Q4-rXI"/>
+                                            <outlet property="movieImage" destination="o3A-UT-KXm" id="sJu-ay-TrO"/>
+                                            <outlet property="movieRating" destination="bFc-PS-Kjo" id="gYl-fc-8an"/>
+                                            <outlet property="movieTitle" destination="Fbs-nz-ZSr" id="4CZ-rt-VwN"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
