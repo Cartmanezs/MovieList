@@ -158,7 +158,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gn1-3k-Qct">
-                                <rect key="frame" x="16" y="425" width="361" height="97.666666666666629"/>
+                                <rect key="frame" x="16" y="422" width="361" height="97.666666666666629"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33U-rL-6dn">
                                         <rect key="frame" x="0.0" y="0.0" width="361" height="38.333333333333336"/>
@@ -179,15 +179,32 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FS8-lN-q4r">
+                                <rect key="frame" x="257.33333333333331" y="355.66666666666669" width="119.66666666666669" height="34.333333333333314"/>
+                                <color key="backgroundColor" white="1" alpha="0.72001759105960261" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="play.rectangle.fill" catalog="system" title="YouTube"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="trailerButtonTapped:" destination="1JZ-MH-FR4" eventType="touchUpInside" id="4N3-4i-LaX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6YW-oi-gq2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="gn1-3k-Qct" firstAttribute="leading" secondItem="Ped-Lt-MV8" secondAttribute="leading" constant="16" id="3Xx-Rd-Vzn"/>
+                            <constraint firstItem="FS8-lN-q4r" firstAttribute="bottom" secondItem="VCl-2D-CWh" secondAttribute="bottom" constant="-10" id="4ug-mW-F1I"/>
                             <constraint firstAttribute="trailing" secondItem="VCl-2D-CWh" secondAttribute="trailing" id="Aus-PL-iHG"/>
                             <constraint firstItem="VCl-2D-CWh" firstAttribute="top" secondItem="Ped-Lt-MV8" secondAttribute="top" id="WhF-PX-qr5"/>
                             <constraint firstAttribute="trailing" secondItem="gn1-3k-Qct" secondAttribute="trailing" constant="16" id="eum-ak-YSI"/>
-                            <constraint firstItem="gn1-3k-Qct" firstAttribute="top" secondItem="VCl-2D-CWh" secondAttribute="bottom" constant="25" id="p5A-cZ-hAw"/>
+                            <constraint firstItem="6YW-oi-gq2" firstAttribute="trailing" secondItem="FS8-lN-q4r" secondAttribute="trailing" constant="16" id="hQa-ao-uWd"/>
+                            <constraint firstItem="gn1-3k-Qct" firstAttribute="top" secondItem="VCl-2D-CWh" secondAttribute="bottom" constant="22" id="p5A-cZ-hAw"/>
                             <constraint firstItem="VCl-2D-CWh" firstAttribute="leading" secondItem="Ped-Lt-MV8" secondAttribute="leading" id="tSv-Nt-uVp"/>
                         </constraints>
                     </view>
@@ -196,6 +213,7 @@
                         <outlet property="movieGenres" destination="Yx1-mK-RBG" id="XtG-M9-OIM"/>
                         <outlet property="movieImageView" destination="VCl-2D-CWh" id="Z2i-1u-xZW"/>
                         <outlet property="movieName" destination="33U-rL-6dn" id="sMI-Uh-8uS"/>
+                        <outlet property="trailerButton" destination="FS8-lN-q4r" id="ODI-qa-e6o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cqF-Nz-c1E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -224,6 +242,7 @@
     </scenes>
     <resources>
         <image name="arrow.up.and.down.text.horizontal" catalog="system" width="128" height="87"/>
+        <image name="play.rectangle.fill" catalog="system" width="128" height="93"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
