@@ -1,34 +1,16 @@
 PODS:
-  - Alamofire (5.8.0)
-  - Cosmos (23.0.0)
-  - ESPullToRefresh (2.9.3)
-  - SDWebImage (5.18.3):
-    - SDWebImage/Core (= 5.18.3)
-  - SDWebImage/Core (5.18.3)
-  - youtube-ios-player-helper (1.0.4)
+  - TMDBSwift (0.5.1)
 
 DEPENDENCIES:
-  - Alamofire
-  - Cosmos
-  - ESPullToRefresh
-  - SDWebImage
-  - youtube-ios-player-helper
+  - TMDBSwift
 
 SPEC REPOS:
   trunk:
-    - Alamofire
-    - Cosmos
-    - ESPullToRefresh
-    - SDWebImage
-    - youtube-ios-player-helper
+    - TMDBSwift
 
 SPEC CHECKSUMS:
-  Alamofire: 0e92e751b3e9e66d7982db43919d01f313b8eb91
-  Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
-  ESPullToRefresh: 0d68daa602b343c81753a1b95e09fd0bfcddfd40
-  SDWebImage: 96e0c18ef14010b7485210e92fac888587ebb958
-  youtube-ios-player-helper: e9b97535e816db3152179d84d999bc1807ecd689
+  TMDBSwift: 9220f3dcee23372c05b92f8c111f5f4c37185aee
 
-PODFILE CHECKSUM: 5008dcdcd5b5a939186b29211bfa3b53b242e3bb
+PODFILE CHECKSUM: 4e25b345aaf92d018cd3d1f39ada5da66271ead2
 
 COCOAPODS: 1.13.0
