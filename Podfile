@@ -6,6 +6,11 @@ target 'MovieList' do
   use_frameworks!
 
   # Pods for MovieList
-  pod "TMDBSwift"
+  pod "SDWebImage"
+  pod 'Alamofire'
+  pod 'Cosmos'
+  pod 'ESPullToRefresh' 
+  pod 'youtube-ios-player-helper'
+
 
 end
