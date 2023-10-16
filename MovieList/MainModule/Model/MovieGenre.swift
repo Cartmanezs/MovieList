@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+struct MovieGenre: Codable {
+    let id: Int
+    let name: String
+}
+
+struct MovieDetailResults: Codable {
+    let genres : [MovieGenre]
+}
