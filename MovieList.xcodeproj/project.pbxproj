@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		520BF85A2AEA5E0A00808C73 /* MovieCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520BF8592AEA5E0A00808C73 /* MovieCellViewModel.swift */; };
 		529F04732AD97EEE00A826BF /* Player.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 529F04722AD97EEE00A826BF /* Player.storyboard */; };
 		529F04752AD97F0D00A826BF /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529F04742AD97F0D00A826BF /* PlayerView.swift */; };
 		529F04772AD97F3D00A826BF /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529F04762AD97F3D00A826BF /* PlayerViewController.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		520BF8592AEA5E0A00808C73 /* MovieCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCellViewModel.swift; sourceTree = "<group>"; };
 		529F04722AD97EEE00A826BF /* Player.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Player.storyboard; sourceTree = "<group>"; };
 		529F04742AD97F0D00A826BF /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		529F04762AD97F3D00A826BF /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				52EB7CD42AD6FAC5005FBC87 /* MovieViewModel.swift */,
+				520BF8592AEA5E0A00808C73 /* MovieCellViewModel.swift */,
 				52CFCEAF2ADD2B4200B15FF5 /* DetailMovieViewModel.swift */,
 			);
 			path = ViewModel;
@@ -341,6 +344,7 @@
 				52C994F92AD6A22A003A774D /* MainMovieViewController.swift in Sources */,
 				52EB7CD52AD6FAC5005FBC87 /* MovieViewModel.swift in Sources */,
 				52CFCEAC2ADBFE1E00B15FF5 /* MoviesResponse.swift in Sources */,
+				520BF85A2AEA5E0A00808C73 /* MovieCellViewModel.swift in Sources */,
 				52EB7CE62AD80488005FBC87 /* MainMovieVCTableViewExtension.swift in Sources */,
 				529F04772AD97F3D00A826BF /* PlayerViewController.swift in Sources */,
 				52CFCEB02ADD2B4200B15FF5 /* DetailMovieViewModel.swift in Sources */,

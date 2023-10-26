@@ -34,12 +34,12 @@ class MovieTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func configure(_ item : Movie) {
-        movieTitle.text = item.title
-        movieGenre.text = item.genres?.first?.name
-        movieRating.text = "\(item.voteAverage)"
-        movieRatinginStars.rating = item.voteAverage / 2
-        setupImage(item.posterPath)
+    func configure(with viewModel: MovieCellViewModelProtocol) {
+        movieTitle.text = viewModel.title
+        movieGenre.text = viewModel.genre
+        movieRating.text = viewModel.rating
+        movieRatinginStars.rating = viewModel.voteAverage / 2
+        setupImage(viewModel.posterPath)
     }
     
     private func setupImage(_ path: String?) {

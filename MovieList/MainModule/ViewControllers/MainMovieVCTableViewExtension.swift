@@ -9,14 +9,15 @@ import UIKit
 
 extension MainMovieViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return movieViewModel?.movies.count ?? 0
+        return movieViewModel?.numberOfRows() ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell",for: indexPath) as? MovieTableViewCell,
               let movie = movieViewModel?.movies[indexPath.row] else { return UITableViewCell() }
+        let cellViewModel = MovieCellViewModel(movie: movie)
         cell.selectionStyle = .none
-        cell.configure(movie)
+        cell.configure(with: cellViewModel)
         
         return cell
     }

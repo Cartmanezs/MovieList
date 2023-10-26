@@ -8,6 +8,7 @@
 import UIKit
 
 protocol MovieViewModelProtocol {
+    func numberOfRows() -> Int
     var movies: [Movie] { get set }
     var totalPages: Int { get }
     func fetchMovies(page: Int, sortBy sort: MovieSort, from viewController: UIViewController, completionHandler: @escaping () -> Void)
@@ -54,5 +55,9 @@ class MovieViewModel: MovieViewModelProtocol {
                 completionHandler()
             }
         }
+    }
+    
+    func numberOfRows() -> Int {
+        return movies.count
     }
 }
