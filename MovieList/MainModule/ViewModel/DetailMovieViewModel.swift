@@ -43,7 +43,7 @@ class DetailMovieViewModel: DetailMovieViewModelProtocol {
         return URL(image: selectedMovie?.posterPath ?? "")
     }
 
-    init(selectedMovie: Movie?,apiService: NetworkDataProtocol) {
+    init(selectedMovie: Movie?, apiService: NetworkDataProtocol) {
         self.selectedMovie = selectedMovie
         self.apiService = apiService
     }

@@ -13,6 +13,7 @@ protocol MovieViewModelProtocol {
     var totalPages: Int { get }
     func fetchMovies(page: Int, sortBy sort: MovieSort, from viewController: UIViewController, completionHandler: @escaping () -> Void)
     func searchMovie(movieTitle: String, completionHandler: @escaping () -> Void)
+    func cellViewModel(forIndexPath indexPath: IndexPath) -> MovieCellViewModelProtocol?
 }
 
 class MovieViewModel: MovieViewModelProtocol {
@@ -59,5 +60,10 @@ class MovieViewModel: MovieViewModelProtocol {
     
     func numberOfRows() -> Int {
         return movies.count
+    }
+    
+    func cellViewModel(forIndexPath indexPath: IndexPath) -> MovieCellViewModelProtocol? {
+        let movie = movies[indexPath.row]
+        return MovieCellViewModel(movie: movie)
     }
 }

@@ -26,20 +26,23 @@ class MovieTableViewCell: UITableViewCell {
         }
     }
     
+    weak var viewModel: MovieCellViewModelProtocol? {
+        willSet(viewModel) {
+            guard let viewModel = viewModel else { return }
+            movieTitle.text = viewModel.title
+            movieGenre.text = viewModel.genre
+            movieRating.text = viewModel.rating
+            movieRatinginStars.rating = viewModel.voteAverage / 2
+            setupImage(viewModel.posterPath)
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-    }
-    
-    func configure(with viewModel: MovieCellViewModelProtocol) {
-        movieTitle.text = viewModel.title
-        movieGenre.text = viewModel.genre
-        movieRating.text = viewModel.rating
-        movieRatinginStars.rating = viewModel.voteAverage / 2
-        setupImage(viewModel.posterPath)
     }
     
     private func setupImage(_ path: String?) {

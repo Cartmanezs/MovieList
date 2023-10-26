@@ -14,10 +14,11 @@ extension MainMovieViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell",for: indexPath) as? MovieTableViewCell,
-              let movie = movieViewModel?.movies[indexPath.row] else { return UITableViewCell() }
-        let cellViewModel = MovieCellViewModel(movie: movie)
+              let viewModel = movieViewModel else { return UITableViewCell() }
+        
+        let cellViewModel = viewModel.cellViewModel(forIndexPath: indexPath)
+        cell.viewModel = cellViewModel
         cell.selectionStyle = .none
-        cell.configure(with: cellViewModel)
         
         return cell
     }

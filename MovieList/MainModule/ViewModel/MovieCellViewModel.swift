@@ -7,14 +7,13 @@
 
 import Foundation
 
-protocol MovieCellViewModelProtocol {
+protocol MovieCellViewModelProtocol: AnyObject {
     var title: String { get }
     var genre: String { get }
     var rating: String { get }
     var voteAverage: Double { get }
     var posterPath: String? { get }
 }
-
 
 class MovieCellViewModel: MovieCellViewModelProtocol {
     private var movie: Movie
